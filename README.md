@@ -17,16 +17,9 @@ This is a CLI extension for Google's Gemini, enabling interaction with Notion wo
 Install the extension via the Gemini CLI:
 
 ```bash
-gemini extensions install notion-gemini-cli-extension
+gemini extensions install https://github.com/vigasdeep/notion-gemini-cli-extension
 ```
 
-## Usage
-
-After installation, run the following command to get started:
-
-```bash
-gemini notion help
-```
 
 You will be prompted to authorize access to your Notion workspace. Follow the instructions in your terminal.
 
@@ -38,13 +31,6 @@ To uninstall the extension, run:
 gemini extensions uninstall notion
 ```
 
-## Configuration
-
-This extension stores Notion API credentials locally in your user profile directory for authentication. You can re-run the login configuration anytime:
-
-```bash
-gemini notion configure
-```
 
 ## Support & Development
 
