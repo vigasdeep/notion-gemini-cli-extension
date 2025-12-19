@@ -1,43 +1,71 @@
-# Figma - Gemini CLI extension
+# Notion - Gemini CLI Extension
 
-Welcome to Figma's Gemini CLI Extension. Currently this repo contains the config to connect to the remote Figma MCP server.
-The MCP Server brings important Figma context to AI agents generating code from Figma design files. With the server enabled, you can:
+**🚧 Project in development – commands and features below are proposed and not yet implemented. 🚧**
 
-- **Generate code from selected frames**: Select a Figma frame and turn it into code. Great for product teams building new flows or iterating on app features.
+The Notion Gemini CLI Extension aims to connect your Notion workspace with the Gemini CLI, enabling command-line and AI-assisted workflows for Notion.
 
-- **Extract design context**: Pull in variables, components, and layout data directly into your IDE. This is especially useful for design systems and component-based workflows.
+## Project Goals
 
-- **Keep your design system components consistent with Code Connect**: Boost output quality by reusing your actual components. Code Connect keeps your generated code consistent with your codebase.
+- **Authenticate with Notion** from the command line.
+- **List and view Notion pages/databases**.
+- **Query, summarize, and edit Notion content** using Gemini-powered natural language.
+- **Automate Notion workflows** via CLI and AI.
 
-To use this extension, you'll need to sign in through Figma's OAuth authentication flow and have either a Dev or Full seat on a Pro, Organization, or Enterprise plan. Once set up, the extension gives you a seamless way to access Figma data and integrate it with your tools.
+## Planned Features
 
-## Installing Figma's Gemini CLI extension
+- Secure OAuth authentication with Notion.
+- Command-line listing and viewing of Notion content.
+- Natural language queries against your Notion workspace.
+- Page and database creation/editing from the CLI.
+- Integration with Gemini for automation and smart actions.
 
-Install the extension using the `gemini extensions install` command:
+## Installation
 
-```bash
-gemini extensions install https://github.com/figma/figma-gemini-cli-extension
-```
-
-### Using Figma's Remote MCP server
-
-To take advantage of the Figma remote MCP server, you need to authenticate
-with Figma.
-
-1. Run `gemini`
-2. Run `/mcp auth figma` inside Gemini CLI to authenticate.
-
-Once you are authenticated you can ask Gemini CLI to implement Figma designs by
-sharing links to the files.
-
-### Figma Remote MCP Server Documentation
-
-- https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/
-
-## Uninstalling Figma's Gemini CLI extension
-
-Uninstall the extension using the `gemini extensions uninstall` command:
+You can install this extension into your Gemini CLI environment using:
 
 ```bash
-gemini extensions uninstall figma
+gemini extensions install https://github.com/vigasdeep/notion-gemini-cli-extension
 ```
+
+_Note: This extension is in development. Installation will add the extension to your Gemini CLI, but available commands may be limited or nonfunctional until initial releases are made._
+
+## Enabling the Extension
+
+After installation, you can verify that the extension is enabled by listing your installed extensions:
+
+```bash
+gemini extensions list
+```
+
+You should see `notion-gemini-cli-extension` in the output.
+
+## Example Commands (Proposed)
+
+_Note: These commands are planned, not yet implemented._
+
+```bash
+# Authenticate with Notion
+gemini notion auth
+
+# List pages
+gemini notion list pages
+
+# Search Notion content
+gemini notion query "Show my recent meeting notes"
+
+# Create a Notion page
+gemini notion create page --title "Todo List" --parent <parent_id>
+```
+
+## Contributing
+
+This project is in early development, and all contributions, issue reports, and ideas are welcome!  
+If you are interested in helping to define the CLI design or build new features, please open an issue or pull request.
+
+## License
+
+MIT
+
+---
+
+*This extension is not affiliated with Notion Labs Inc. “Notion” and related marks are trademarks of Notion Labs Inc.*
