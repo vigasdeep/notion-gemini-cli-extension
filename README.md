@@ -1,4 +1,4 @@
-# Trust, Minimal Permissions, and Authorizing the Extension
+# notion-gemini-cli-extension
 
 This extension only requests the minimal permissions required to access your Notion workspace via the Notion API. You authorize the extension by following the Notion account flow during configuration—the credentials remain local to your machine and are never uploaded anywhere.
 
