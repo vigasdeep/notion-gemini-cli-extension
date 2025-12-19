@@ -1,0 +1,13 @@
+{
+  "name": "Notion",
+  "version": "1.0.0",
+  "description": "Integrate Notion into your workflow: interact with Notion pages and databases",
+  "mcpServers": {
+    "figma": {
+      "httpUrl": "https://mcp.notion.com/mcp",
+      "oauth": {
+        "enabled": true
+      }
+    }
+  }
+}
