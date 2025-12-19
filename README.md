@@ -1,71 +1,51 @@
-# Notion - Gemini CLI Extension
+# Trust, Minimal Permissions, and Authorizing the Extension
 
-**🚧 Project in development – commands and features below are proposed and not yet implemented. 🚧**
+This extension only requests the minimal permissions required to access your Notion workspace via the Notion API. You authorize the extension by following the Notion account flow during configuration—the credentials remain local to your machine and are never uploaded anywhere.
 
-The Notion Gemini CLI Extension aims to connect your Notion workspace with the Gemini CLI, enabling command-line and AI-assisted workflows for Notion.
+# Notion Gemini CLI Extension
 
-## Project Goals
+This is a CLI extension for Google's Gemini, enabling interaction with Notion workspaces directly from the command line. Quickly fetch, create, or update Notion pages and databases using natural language.
 
-- **Authenticate with Notion** from the command line.
-- **List and view Notion pages/databases**.
-- **Query, summarize, and edit Notion content** using Gemini-powered natural language.
-- **Automate Notion workflows** via CLI and AI.
+## Features
 
-## Planned Features
-
-- Secure OAuth authentication with Notion.
-- Command-line listing and viewing of Notion content.
-- Natural language queries against your Notion workspace.
-- Page and database creation/editing from the CLI.
-- Integration with Gemini for automation and smart actions.
+- Fetch content from Notion databases or pages
+- Create and update pages in Notion
+- Query Notion using natural language
 
 ## Installation
 
-You can install this extension into your Gemini CLI environment using:
+Install the extension via the Gemini CLI:
 
 ```bash
-gemini extensions install https://github.com/vigasdeep/notion-gemini-cli-extension
+gemini extensions install notion-gemini-cli-extension
 ```
 
-_Note: This extension is in development. Installation will add the extension to your Gemini CLI, but available commands may be limited or nonfunctional until initial releases are made._
+## Usage
 
-## Enabling the Extension
-
-After installation, you can verify that the extension is enabled by listing your installed extensions:
+After installation, run the following command to get started:
 
 ```bash
-gemini extensions list
+gemini notion help
 ```
 
-You should see `notion-gemini-cli-extension` in the output.
+You will be prompted to authorize access to your Notion workspace. Follow the instructions in your terminal.
 
-## Example Commands (Proposed)
+## Uninstall
 
-_Note: These commands are planned, not yet implemented._
+To uninstall the extension, run:
 
 ```bash
-# Authenticate with Notion
-gemini notion auth
-
-# List pages
-gemini notion list pages
-
-# Search Notion content
-gemini notion query "Show my recent meeting notes"
-
-# Create a Notion page
-gemini notion create page --title "Todo List" --parent <parent_id>
+gemini extensions uninstall notion
 ```
 
-## Contributing
+## Configuration
 
-This project is in early development, and all contributions, issue reports, and ideas are welcome!  
-If you are interested in helping to define the CLI design or build new features, please open an issue or pull request.
+This extension stores Notion API credentials locally in your user profile directory for authentication. You can re-run the login configuration anytime:
 
-## License
+```bash
+gemini notion configure
+```
 
-MIT
+## Support & Development
 
----
-
-*This extension is not affiliated with Notion Labs Inc. “Notion” and related marks are trademarks of Notion Labs Inc.*
+Please [open an issue](https://github.com/vigasdeep/notion-gemini-cli-extension/issues) for bugs, feature requests, or support. Pull requests are welcome.
