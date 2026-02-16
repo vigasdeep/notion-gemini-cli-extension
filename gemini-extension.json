@@ -4,7 +4,7 @@
   "description": "Integrate Notion into your workflow: interact with Notion pages and databases",
   "mcpServers": {
     "notion": {
-      "httpUrl": "https://mcp.notion.com/mcp",
+      "httpUrl": "https://mcp.notion.com",
       "oauth": {
         "enabled": true
       }
